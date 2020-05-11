@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Component Video</title>
+    <!-- the top two are react libraries -->
+    <!-- react development api -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <!-- react dom access -->
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <!-- babel compiler turns jsx into html/css/javascript-->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <style>
+      #container {
+        padding: 50px;
+        background-color: #EEE;
+      }
+      #container h1 {
+        font-size: 144px;
+        font-family: sans-serif;
+        color: #0080A8
+      }
+      button {
+        font-size: 64px;
+      }
+
+    </style>
+
+  </head>
+
+    <body>
+      <div id="container"></div>
+
+      <script type="text/babel">
+        let destination = document.querySelector("#container");
+
+        class Buttonify extends React.Component {
+          render() {
+            return(
+              <div>
+                <button type={this.props.behavior}>{this.props.children}</button>
+              </div>
+            );
+          }
+        }
+
+        ReactDOM.render(
+          <div>
+            <Buttonify behavior="submit">SEND DATA</Buttonify>
+          </div>,
+          destination
+        );
+      </script>
+    </body>
+
+  </html>

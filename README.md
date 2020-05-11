@@ -1,0 +1,1 @@
+These exercises created following this [tutorial](https://www.youtube.com/playlist?list=PL478wQWRhpfaQbaET2DvDzG60EFGThtd1) series.
